@@ -11,8 +11,43 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/contact-us.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
+    <!-- <section class="loading">
+      <div class="loader">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+        <span style="--i:5;"></span>
+        <span style="--i:6;"></span>
+        <span style="--i:7;"></span>
+        <span style="--i:8;"></span>
+        <span style="--i:9;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+      </div>
+    </section> -->
+    <button id="backtop">
+      <a href="#">Top</a>
+    </button>
     <header>
       <nav
         class="navbar navbar-expand-md navbar-dark bg-danger fixed-top"
@@ -94,13 +129,273 @@
         </div>
       </nav>
     </header>
-    <footer>
-      
+    <div class="page-movers">
+      <a href="index.html" class="page-mover1">Home |</a
+      ><a href="contact-us.html" class="page-mover2">Contact Us</a>
+    </div>
+    <main class="main">
+      <section class="main__contact">
+        <div data-aos="flip-right">
+          <h1 class="main__contact-h1">Contact Us</h1>
+        </div>
+        <svg
+          class="main__contact-svg"
+          width="41"
+          height="9"
+          viewBox="0 0 41 9"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.99841 0C3.41507 0 0.5 2.01871 0.5 4.50005C0.5 6.98139 3.41507 9 6.99841 9C10.3878 9 13.1779 7.19363 13.47 4.8982H18.1471V5.8448L40.5 5.8448V3.15554L18.147 3.15554V4.10202H13.4699C13.1777 1.80648 10.3878 0 6.99841 0ZM19.0102 3.95161L39.6367 3.95161V5.04839H19.0102V3.95161ZM12.6338 4.50005C12.6338 6.54222 10.1056 8.2036 6.99829 8.2036C3.89095 8.2036 1.36281 6.54222 1.36281 4.50005C1.36281 2.45778 3.89095 0.796295 6.99829 0.796295C10.1056 0.796295 12.6338 2.45778 12.6338 4.50005Z"
+            fill="#BB2339"
+          />
+        </svg>
+        <div class="main__contact-wrapper container">
+          <div data-aos="fade-up">
+            <div class="main__contact-wrapper-left">
+              <div class="main__contact-wrapper-left-boxes">
+                <div class="main__contact-wrapper-left-boxes-box">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21.0004 15.9201V18.9201C21.0015 19.1986 20.9445 19.4743 20.8329 19.7294C20.7214 19.9846 20.5577 20.2137 20.3525 20.402C20.1473 20.5902 19.905 20.7336 19.6412 20.8228C19.3773 20.912 19.0978 20.9452 18.8204 20.9201C15.7433 20.5857 12.7874 19.5342 10.1904 17.8501C7.77425 16.3148 5.72576 14.2663 4.19042 11.8501C2.5004 9.2413 1.44866 6.27109 1.12042 3.1801C1.09543 2.90356 1.1283 2.62486 1.21692 2.36172C1.30555 2.09859 1.44799 1.85679 1.63519 1.65172C1.82238 1.44665 2.05023 1.28281 2.30421 1.17062C2.5582 1.05843 2.83276 1.00036 3.11042 1.0001H6.11042C6.59573 0.995321 7.06621 1.16718 7.43418 1.48363C7.80215 1.80008 8.0425 2.23954 8.11042 2.7201C8.23704 3.68016 8.47187 4.62282 8.81042 5.5301C8.94496 5.88802 8.97408 6.27701 8.89433 6.65098C8.81457 7.02494 8.62928 7.36821 8.36042 7.6401L7.09042 8.9101C8.51398 11.4136 10.5869 13.4865 13.0904 14.9101L14.3604 13.6401C14.6323 13.3712 14.9756 13.1859 15.3495 13.1062C15.7235 13.0264 16.1125 13.0556 16.4704 13.1901C17.3777 13.5286 18.3204 13.7635 19.2804 13.8901C19.7662 13.9586 20.2098 14.2033 20.527 14.5776C20.8441 14.9519 21.0126 15.4297 21.0004 15.9201Z"
+                      stroke="#242424"
+                      stroke-opacity="0.9"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <div class="main__contact-wrapper-left-boxes-box-text">
+                    <h3 class="main__contact-wrapper-left-boxes-box-text-h3">
+                      Phone
+                    </h3>
+                    <p class="main__contact-wrapper-left-boxes-box-text-p">
+                      +1 212344
+                    </p>
+                  </div>
+                </div>
+                <div class="main__contact-wrapper-left-boxes-box">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.9"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4 5C3.45228 5 3 5.45228 3 6V18C3 18.5477 3.45228 19 4 19H20C20.5477 19 21 18.5477 21 18V6C21 5.45228 20.5477 5 20 5H4ZM1 6C1 4.34772 2.34772 3 4 3H20C21.6523 3 23 4.34772 23 6V18C23 19.6523 21.6523 21 20 21H4C2.34772 21 1 19.6523 1 18V6Z"
+                      fill="#242424"
+                    />
+                    <path
+                      opacity="0.9"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1.18079 5.42662C1.49751 4.97417 2.12104 4.86414 2.57349 5.18085L12 11.7794L21.4266 5.18085C21.879 4.86414 22.5025 4.97417 22.8193 5.42662C23.136 5.87907 23.0259 6.5026 22.5735 6.81932L12.5735 13.8193C12.2292 14.0603 11.7709 14.0603 11.4266 13.8193L1.42656 6.81932C0.974113 6.5026 0.864078 5.87907 1.18079 5.42662Z"
+                      fill="#242424"
+                    />
+                  </svg>
+                  <div class="main__contact-wrapper-left-boxes-box-text">
+                    <h3 class="main__contact-wrapper-left-boxes-box-text-h3">
+                      Email
+                    </h3>
+                    <p class="main__contact-wrapper-left-boxes-box-text-p">
+                      eaturkish
+                    </p>
+                  </div>
+                </div>
+                <div class="main__contact-wrapper-left-boxes-box">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M7.5 0H16.5C20.6415 0 24 3.3585 24 7.5V16.5C24 20.6415 20.6415 24 16.5 24H7.5C3.3585 24 0 20.6415 0 16.5V7.5C0 3.3585 3.3585 0 7.5 0ZM16.5 21.75C19.395 21.75 21.75 19.395 21.75 16.5V7.5C21.75 4.605 19.395 2.25 16.5 2.25H7.5C4.605 2.25 2.25 4.605 2.25 7.5V16.5C2.25 19.395 4.605 21.75 7.5 21.75H16.5Z"
+                      fill="#242424"
+                      fill-opacity="0.9"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6 12C6 8.6865 8.6865 6 12 6C15.3135 6 18 8.6865 18 12C18 15.3135 15.3135 18 12 18C8.6865 18 6 15.3135 6 12ZM8.25 12C8.25 14.067 9.933 15.75 12 15.75C14.067 15.75 15.75 14.067 15.75 12C15.75 9.9315 14.067 8.25 12 8.25C9.933 8.25 8.25 9.9315 8.25 12Z"
+                      fill="#242424"
+                      fill-opacity="0.9"
+                    />
+                    <circle
+                      cx="18.4499"
+                      cy="5.54999"
+                      r="0.7995"
+                      fill="#242424"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  <div class="main__contact-wrapper-left-boxes-box-text">
+                    <h3 class="main__contact-wrapper-left-boxes-box-text-h3">
+                      Insta
+                    </h3>
+                    <p class="main__contact-wrapper-left-boxes-box-text-p">
+                      eaturkish
+                    </p>
+                  </div>
+                </div>
+                <div class="main__contact-wrapper-left-boxes-box">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.9"
+                      d="M22.9924 3.94923C22.9925 3.7726 22.9458 3.59909 22.8571 3.44637C22.7683 3.29366 22.6407 3.1672 22.4871 3.07986C22.3336 2.99253 22.1597 2.94744 21.983 2.94919C21.8064 2.95095 21.6334 2.99948 21.4816 3.08985C20.8963 3.43823 20.2662 3.70503 19.6086 3.88285C18.6696 3.07708 17.472 2.63615 16.2347 2.64066C14.8772 2.64222 13.5735 3.17125 12.5989 4.11604C11.6242 5.06083 11.0548 6.34742 11.011 7.70414C8.335 7.2774 5.90965 5.88066 4.19747 3.78028C4.09431 3.65511 3.96256 3.55659 3.81333 3.49303C3.6641 3.42946 3.50178 3.40271 3.34005 3.41503C3.17841 3.42834 3.02244 3.48082 2.88564 3.56794C2.74884 3.65506 2.63532 3.77419 2.55489 3.91503C2.14242 4.63484 1.90552 5.44179 1.86344 6.27034C1.82136 7.09889 1.97528 7.92568 2.3127 8.68358L2.31075 8.68553C2.1591 8.77893 2.03394 8.90969 1.94725 9.06528C1.86057 9.22087 1.81525 9.3961 1.81563 9.57421C1.81379 9.72114 1.82261 9.86801 1.842 10.0137C1.94414 11.2719 2.50178 12.4497 3.41036 13.3262C3.34872 13.4436 3.3111 13.5721 3.2997 13.7042C3.2883 13.8364 3.30334 13.9694 3.34395 14.0957C3.74006 15.3298 4.58245 16.3718 5.70626 17.0176C4.5645 17.4591 3.33168 17.613 2.11641 17.4658C1.89148 17.4376 1.66364 17.4866 1.47026 17.6049C1.27688 17.7232 1.12944 17.9037 1.05212 18.1168C0.974813 18.3299 0.97222 18.563 1.04477 18.7777C1.11732 18.9925 1.26071 19.1762 1.45141 19.2988C3.5415 20.645 5.97509 21.3607 8.46118 21.3604C11.2804 21.3921 14.0311 20.4912 16.2854 18.7978C18.5397 17.1044 20.1711 14.7135 20.926 11.997C21.2791 10.8137 21.4593 9.5855 21.4612 8.35059C21.4612 8.28516 21.4612 8.21778 21.4602 8.1504C21.9823 7.58733 22.3868 6.9257 22.6499 6.2043C22.913 5.48289 23.0294 4.71622 22.9924 3.94923V3.94923ZM19.6857 7.16114C19.5206 7.35648 19.437 7.60794 19.4523 7.86329C19.4621 8.02829 19.4611 8.19429 19.4611 8.35059C19.4591 9.39413 19.3061 10.4319 19.007 11.4316C18.3905 13.743 17.0162 15.7807 15.1041 17.2182C13.192 18.6558 10.8529 19.4101 8.46118 19.3604C7.60206 19.3606 6.7459 19.2597 5.9104 19.0596C6.97581 18.7162 7.97199 18.1869 8.85278 17.4961C9.01501 17.3684 9.13373 17.1936 9.19267 16.9957C9.2516 16.7978 9.24786 16.5865 9.18195 16.3908C9.11605 16.1952 8.99121 16.0247 8.82456 15.9028C8.65791 15.7809 8.45762 15.7135 8.25118 15.71C7.42001 15.697 6.62631 15.362 6.03731 14.7754C6.18673 14.7471 6.33517 14.7119 6.48263 14.6699C6.69864 14.6084 6.88767 14.476 7.01929 14.2941C7.15091 14.1121 7.21745 13.8911 7.2082 13.6667C7.19896 13.4423 7.11446 13.2275 6.96831 13.057C6.82217 12.8865 6.62289 12.7701 6.40255 12.7266C5.92009 12.6313 5.4661 12.426 5.07586 12.1268C4.68563 11.8275 4.36967 11.4422 4.15255 11.001C4.33328 11.0256 4.51516 11.041 4.69747 11.0469C4.91405 11.0502 5.12606 10.9845 5.30285 10.8593C5.47963 10.7341 5.61202 10.556 5.68087 10.3506C5.74685 10.1434 5.74345 9.92025 5.6712 9.71512C5.59894 9.50999 5.46177 9.33401 5.28048 9.21387C4.84063 8.92084 4.48032 8.52329 4.23184 8.05683C3.98335 7.59036 3.85444 7.06955 3.85665 6.54103C3.85665 6.47463 3.8586 6.40822 3.86251 6.34279C6.10377 8.43304 9.01083 9.66524 12.0715 9.82228C12.226 9.82837 12.3799 9.79927 12.5215 9.73718C12.6631 9.67509 12.7887 9.58164 12.8889 9.46388C12.9881 9.34498 13.0583 9.20469 13.0941 9.05404C13.1298 8.90339 13.1301 8.7465 13.0949 8.59572C13.0377 8.35708 13.0085 8.11259 13.008 7.8672C13.0089 7.01173 13.3491 6.19157 13.954 5.58667C14.5589 4.98176 15.3791 4.64153 16.2346 4.64063C16.6747 4.63945 17.1103 4.72953 17.5139 4.90518C17.9174 5.08082 18.2802 5.33823 18.5793 5.66114C18.6946 5.78522 18.8398 5.87773 19.001 5.92987C19.1622 5.98202 19.334 5.99205 19.5002 5.95903C19.911 5.87909 20.3159 5.77142 20.7121 5.63677C20.4418 6.18974 20.0964 6.70272 19.6857 7.16114V7.16114Z"
+                      fill="#242424"
+                    />
+                  </svg>
+                  <div class="main__contact-wrapper-left-boxes-box-text">
+                    <h3 class="main__contact-wrapper-left-boxes-box-text-h3">
+                      Twitt
+                    </h3>
+                    <p class="main__contact-wrapper-left-boxes-box-text-p">
+                      eaturkish
+                    </p>
+                  </div>
+                </div>
+                <div class="main__contact-wrapper-left-boxes-box">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.1194 5.32003H16.9994V2.14003C16.0891 2.04538 15.1745 1.99865 14.2594 2.00003C11.5394 2.00003 9.67938 3.66003 9.67938 6.70003V9.32003H6.60938V12.88H9.67938V22H13.3594V12.88H16.4194L16.8794 9.32003H13.3594V7.05003C13.3594 6.00003 13.6394 5.32003 15.1194 5.32003Z"
+                      fill="#242424"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+
+                  <div class="main__contact-wrapper-left-boxes-box-text">
+                    <h3 class="main__contact-wrapper-left-boxes-box-text-h3">
+                      Fbook
+                    </h3>
+                    <p class="main__contact-wrapper-left-boxes-box-text-p">
+                      eaturkish
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-down">
+            <div class="main__contact-wrapper-right">
+              <h1 class="main__contact-wrapper-right-h1">Send Message</h1>
+              <p class="main__contact-wrapper-right-p">
+                If you have any questions, you can send us an SMS or contact us
+                by phone you can also contact us via social networks.
+              </p>
+              <form action="#">
+                <div class="first two">
+                  <input class="name" placeholder="Your name" type="text" />
+                  <input
+                    class="email"
+                    placeholder="Email address"
+                    type="email"
+                  />
+                </div>
+                <div class="second-two">
+                  <input class="phone" placeholder="Phone number" type="text" />
+                  <input class="sub" placeholder="Subject" type="text" />
+                </div>
+                <input class="mess" placeholder="Message" type="text" />
+                <br />
+                <input class="btn" value="Send" type="submit" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main__find-us container">
+        <div data-aos="flip-right">
+          <h2 class="main__find-us-h2">Find us by card</h2>
+        </div>
+        <div data-aos="flip-up">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1528342.3508623547!2d61.75792465625002!3d41.568299800000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5825479b304221%3A0xde684dff0925697f!2sEuroasia%20restaurant!5e0!3m2!1sru!2s!4v1684566671763!5m2!1sru!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div data-aos="fade-up">
+        <div class="footer__first container">
+          <p class="footer__first-p">Newsletter</p>
+          <h1 class="footer__first-h1">Subscribe to Our Newsletter</h1>
+          <h6 class="footer__first-h6">And never miss latest Updates!</h6>
+          <form action="">
+            <input type="email" placeholder="Email Address" />
+            <input type="submit" value="Subscribe" />
+          </form>
+        </div>
+      </div>
+      <div class="footer__second container">
+        <div class="footer__second-left">
+          <h3 class="footer__second-left-h3">Contact Us</h3>
+          <h6 class="footer__second-left-h6">
+            9 W 53rd St, London, NY 10019, UK
+          </h6>
+          <h6 class="footer__second-left-h6">+1 212-344-1230</h6>
+          <h6 class="footer__second-left-h6">+1 212-555-1230</h6>
+        </div>
+        <div class="footer__second-center">
+          <img src="images/home-2/d.png" alt="" />
+          <p class="footer__second-center-p">
+            "The best way to find yourself is to lose yourself in the service of
+            others.”
+          </p>
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="footer__second-right">
+          <h3 class="footer__second-right-h3">Working Hours</h3>
+          <h6 class="footer__second-right-h6">Monday-Friday:</h6>
+          <h6 class="footer__second-right-h6">08:00 am - 12:00 am</h6>
+          <h6 class="footer__second-right-h6">Saturday-Sunday:</h6>
+          <h6 class="footer__second-right-h6">07:00am - 11:00 pm</h6>
+        </div>
+      </div>
     </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -2,3 +2,200 @@
 @use "../utils/variables" as var;
 @use "../base/typography";
 @use "../utils/mixins" as mixin;
+
+.main__header {
+  padding-top: 80px;
+  @media (max-width: 900px) {
+    text-align: center;
+    .main__header-wrapper {
+      flex-direction: column;
+      &-left {
+        margin-bottom: 100px;
+        &-h1 {
+          font-size: var.$font64;
+        }
+      }
+      &-right {
+        width: 90%;
+        padding-left: 5%;
+        img {
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+  font-family: cera round pro;
+  width: 100%;
+  @include mixin.df(space-between, center, row);
+  min-height: 100vh;
+  background-color: var.$bg-red;
+  &-wrapper {
+    @include mixin.df(center, center, row);
+    &-left {
+      width: 90%;
+      color: var.$color-white;
+      &-h3 {
+        font-weight: 700;
+        font-size: var.$font23;
+        padding-bottom: 20px;
+      }
+      &-h1 {
+        font-weight: 700;
+        padding-bottom: 15px;
+        font-size: var.$font90;
+      }
+      &-p {
+        font-weight: 400;
+        font-size: var.$font16;
+        padding-bottom: 40px;
+      }
+      &-btn {
+        border: none;
+        background-color: transparent;
+        border: 2px solid var.$color-white;
+        border-radius: 50px;
+        padding: 15px 50px;
+        transition: 0.5s;
+        font-size: var.$font16;
+        font-weight: 700;
+        color: var.$color-white;
+      }
+      &-btn:hover {
+        background-color: var.$bg-white;
+        color: var.$color-red;
+      }
+    }
+    &-right {
+      img {
+        width: 107%;
+      }
+    }
+  }
+}
+
+.main__dishes {
+  min-height: 90vh;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 120px;
+  background-color: var.$bg-gray;
+  .owl-carousel {
+    .owl-nav {
+      span {
+        border: 2px solid #aaaaaa;
+        font-size: var.$font48;
+        border-radius: 5px;
+        padding: 0 20px;
+      }
+    }
+  }
+  &-wrapper {
+    &-content {
+      &-h2 {
+        font-family: cera round pro;
+        font-weight: 500;
+        font-size: var.$font48;
+        color: var.$color-red;
+        padding-bottom: 40px;
+      }
+    }
+    &-row {
+      width: 100%;
+      flex-wrap: wrap;
+      flex-direction: row;
+      font-family: open sans;
+      @include mixin.df(space-between, center, row);
+      &-card {
+        background-color: var.$bg-white;
+        border-radius: 15px;
+        padding: 50px 0;
+        width: 23%;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        img:first-child {
+          width: 100%;
+          margin-top: -30px;
+        }
+        &-h4 {
+          font-size: var.$font18;
+          font-weight: 600;
+          text-align: center;
+          padding-bottom: 20px;
+        }
+        &-img {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        &-p {
+          font-size: var.$font24;
+          font-weight: 700;
+          color: var.$color-red;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.main__regular-pack {
+  &-h2 {
+    padding-top: 120px;
+    font-family: "cera round pro";
+    font-size: var.$font48;
+    color: var.$color-red;
+    padding-bottom: 70px;
+  }
+  &-row {
+    &-card {
+      border-radius: 15px;
+      border: 3px solid var.$bg-grey;
+      padding: 50px 20px;
+      transition: 0.5s;
+      img {
+        max-width: 270px;
+      }
+      &-h4 {
+        font-size: var.$font14;
+        color: var.$color-black;
+        font-weight: 600;
+        font-family: open sans;
+        padding-top: 10px;
+        text-align: center;
+        padding-bottom: 15px;
+      }
+      &-p {
+        text-align: center;
+        font-weight: 600;
+        font-family: open sans;
+        font-size: var.$font23;
+        color: var.$color-red;
+      }
+      &:hover {
+        border: 3px solid var.$color-gray;
+        background-color: var.$bg-gray;
+      }
+    }
+  }
+  .ap-tab-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .ap-tab-item {
+      .ap-tab-link {
+        
+      }
+      .ap-tab-link:hover {
+        background-color: var.$bg-red;
+        color: var.$color-white;
+      }
+    }
+  }
+  .ap-tab-content.active-tab {
+    margin-top: 70px;
+    margin-bottom: 120px;
+    display: grid !important;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 30px;
+  }
+}

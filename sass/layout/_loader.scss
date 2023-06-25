@@ -1,3 +1,59 @@
-@use '../utils/mixins' as mixin;
-@use '../utils/variables' as var;
+@use "../utils/mixins" as mixin;
+@use "../utils/variables" as var;
 @use "../base/typography";
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #BB2339;
+  animation: animateBg 7s linear infinite;
+  -webkit-animation: animateBg 7s linear infinite;
+}
+@keyframes animateBg {
+  0% {
+    filter: hue-rotate(0deg);
+    -webkit-filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    -webkit-filter: hue-rotate(360deg);
+  }
+}
+
+.loader {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(18deg * var(--i)));
+  -webkit-transform: rotate(calc(18deg * var(--i)));
+  -moz-transform: rotate(calc(18deg * var(--i)));
+  -ms-transform: rotate(calc(18deg * var(--i)));
+  -o-transform: rotate(calc(18deg * var(--i)));
+}
+
+span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: red;
+  box-shadow: 0 0 10px red, 0 0 20px red, 0 0 40px red,
+    0 0 60px red, 0 0 80px red, 0 0 100px red;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
