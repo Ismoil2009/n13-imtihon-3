@@ -102,11 +102,16 @@
         transition: 0.5s;
         color: var.$color-white;
         padding: 10px 25px;
+        &.active-tab{
+          background-color: var.$bg-white;
+          color: var.$color-red;
+        }
       }
       .ap-tab-link:hover {
         background-color: var.$bg-white;
         color: var.$color-red;
       }
+      
     }
   }
   .ap-tab-content.active-tab {

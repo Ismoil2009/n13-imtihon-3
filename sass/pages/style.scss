@@ -109,18 +109,31 @@
         background-color: var.$bg-white;
         border-radius: 15px;
         padding: 50px 0;
-        width: 23%;
-        margin-bottom: 20px;
+        transition: 2s;
         margin-right: 20px;
-        img:first-child {
+        img {
           width: 100%;
           margin-top: -30px;
+        }
+        &:hover {
+          background-color: var.$bg-red;
+          h4 {
+            color: var.$color-white;
+          }
+          p {
+            color: var.$color-white;
+          }
         }
         &-h4 {
           font-size: var.$font18;
           font-weight: 600;
           text-align: center;
           padding-bottom: 20px;
+          transition: 0.5s;
+          -webkit-transition: 0.5s;
+          -moz-transition: 0.5s;
+          -ms-transition: 0.5s;
+          -o-transition: 0.5s;
         }
         &-img {
           width: 100%;
@@ -131,6 +144,7 @@
           font-weight: 700;
           color: var.$color-red;
           text-align: center;
+          transition: 0.5s;
         }
       }
     }
@@ -138,6 +152,7 @@
 }
 
 .main__regular-pack {
+  overflow: auto;
   &-h2 {
     padding-top: 120px;
     font-family: "cera round pro";
@@ -147,12 +162,12 @@
   }
   &-row {
     &-card {
-      border-radius: 15px;
-      border: 3px solid var.$bg-grey;
-      padding: 50px 20px;
+      min-width: 270px;
+      border-radius: 10px;
+      border: 2px solid var.$bg-grey;
       transition: 0.5s;
       img {
-        max-width: 270px;
+        width: 100%;
       }
       &-h4 {
         font-size: var.$font14;
@@ -162,6 +177,7 @@
         padding-top: 10px;
         text-align: center;
         padding-bottom: 15px;
+        transition: 0.5s;
       }
       &-p {
         text-align: center;
@@ -169,24 +185,53 @@
         font-family: open sans;
         font-size: var.$font23;
         color: var.$color-red;
+        transition: 0.5s;
       }
       &:hover {
-        border: 3px solid var.$color-gray;
-        background-color: var.$bg-gray;
+        border: 2px solid var.$color-red;
+        background-color: var.$bg-red;
+        h4 {
+          color: var.$color-white;
+        }
+        p {
+          color: var.$color-white;
+        }
       }
     }
   }
-  .ap-tab-list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .ap-tab-item {
-      .ap-tab-link {
-        
-      }
-      .ap-tab-link:hover {
-        background-color: var.$bg-red;
-        color: var.$color-white;
+  .ap-tab {
+    min-width: 1200px;
+    .ap-tab-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      .ap-tab-item {
+        .ap-tab-link {
+          font-family: Open Sans;
+          font-size: 16px;
+          font-weight: 600;
+          transition: 0.5s;
+          padding: 10px 20px;
+          border: 1px solid var.$color-red;
+          border-radius: 15px;
+          -webkit-border-radius: 15px;
+          -moz-border-radius: 15px;
+          -ms-border-radius: 15px;
+          -o-border-radius: 15px;
+          -webkit-transition: 0.5s;
+          -moz-transition: 0.5s;
+          -ms-transition: 0.5s;
+          -o-transition: 0.5s;
+          &.active-tab {
+            background-color: var.$bg-red;
+            color: var.$color-white;
+          }
+        }
+        .ap-tab-link:hover {
+          background-color: var.$bg-red;
+          color: var.$color-white;
+        }
       }
     }
   }
@@ -197,5 +242,321 @@
     grid-column-gap: 20px;
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 30px;
+  }
+}
+
+.main__customers {
+  background-color: var.$bg-grey;
+  font-family: cera round pro;
+  &-wrapper {
+    &-h3 {
+      font-size: var.$font23;
+      color: var.$color-black;
+      text-align: center;
+      padding-top: 90px;
+      font-weight: 700;
+    }
+    .spoon {
+      width: 100%;
+      margin-top: 10px;
+    }
+    &-h1 {
+      font-size: var.$font48;
+      font-weight: 400;
+      text-align: center;
+      padding-top: 10px;
+      color: var.$color-black;
+      padding-bottom: 60px;
+    }
+    &-row {
+      @include mixin.df(space-between, center, row);
+      &-card {
+        max-width: 400px;
+        border-radius: 10px;
+        background-color: var.$bg-white;
+        padding: 20px;
+        border: 1px solid var.$color-white;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+        &:hover {
+          border: 1px solid var.$color-red;
+          h2 {
+            color: var.$color-red;
+          }
+          p {
+            color: var.$color-red;
+          }
+        }
+        &-h2 {
+          font-size: var.$font24;
+          font-weight: 600;
+          color: var.$color-grey;
+          margin-bottom: 10px;
+          transition: 0.5s;
+        }
+        &-p {
+          font-weight: 400;
+          font-size: var.$font14;
+          color: var.$color-grey;
+          margin-bottom: 20px;
+          transition: 0.5s;
+        }
+        &-things {
+          transition: 0.5s;
+          @include mixin.df(start, center, row);
+          h5 {
+            font-size: var.$font12;
+            font-weight: 400;
+            color: var.$color-grey;
+          }
+          &-first {
+            @include mixin.df(center, center, row);
+            svg {
+              margin-right: 5px;
+            }
+            margin-right: 15px;
+          }
+          &-second {
+            @include mixin.df(center, center, row);
+            svg {
+              margin-right: 5px;
+            }
+            margin-right: 15px;
+          }
+          &-third {
+            @include mixin.df(center, center, row);
+            svg {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .owl-carousel {
+    .owl-nav {
+      padding-bottom: 50px;
+      margin-top: 30px;
+      span {
+        border: 2px solid #aaaaaa;
+        font-size: var.$font48;
+        border-radius: 5px;
+        padding: 0 20px;
+      }
+    }
+  }
+}
+
+.main__update {
+  font-family: cera round pro;
+  &-wrapper {
+    &-h3 {
+      font-size: var.$font23;
+      font-weight: 700;
+      color: var.$color-black;
+      margin-bottom: 8px;
+      text-align: center;
+      margin-top: 90px;
+    }
+    svg {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+    &-h1 {
+      font-size: var.$font48;
+      font-weight: 500;
+      text-align: center;
+      color: var.$color-red;
+      margin-bottom: 60px;
+    }
+    &-row {
+      @include mixin.df(center, center, row);
+      gap: 1rem;
+      flex-wrap: wrap;
+      &-card {
+        width: calc((100% / 3) - 1rem);
+        min-width: 250px;
+        border-radius: 15px;
+        margin-bottom: 60px;
+        border: 3px solid var.$color-gray;
+        img {
+          width: 100%;
+        }
+        &-h3 {
+          font-size: var.$font24;
+          font-weight: 500;
+          color: var.$color-black;
+          margin-bottom: 10px;
+          margin-top: 20px;
+          text-align: center;
+        }
+        &-p {
+          font-weight: 400;
+          font-size: var.$font14;
+          color: var.$color-gray;
+          text-align: center;
+          margin-bottom: 15px;
+        }
+        &-h4s {
+          @include mixin.df(space-between, center, row);
+          padding-bottom: 30px;
+          &-h4 {
+            font-size: var.$font16;
+            color: var.$color-red;
+            font-weight: 700;
+            margin-left: 15px;
+            margin-right: 15px;
+          }
+          &-h4-2 {
+            font-size: var.$font16;
+            color: var.$color-black;
+            font-weight: 700;
+            margin-left: 15px;
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+    &-btn {
+      margin-bottom: 110px;
+      font-size: var.$font16;
+      font-weight: 700;
+      padding: 15px 42px;
+      border: 2px solid var.$color-red;
+      border-radius: 20px;
+      color: var.$color-black;
+      transition: 0.5s;
+      background-color: var.$color-white;
+      &:hover {
+        background-color: var.$bg-red;
+        color: var.$color-white;
+      }
+    }
+  }
+}
+
+.main__video {
+  @media (max-width: 824px) {
+    button {
+      display: none;
+    }
+  }
+}
+
+.main__gallery {
+  @media (max-width: 1200px) {
+    .main__gallery-wrapper {
+      flex-direction: column;
+      &-right {
+        margin-left: 580px;
+      }
+    }
+    .main__gallery-wrapper-right-card-text {
+      height: 460px;
+    }
+  }
+  @media (max-width: 992px) {
+    .owl-carousel {
+      flex-direction: column;
+      margin-left: 330px;
+    }
+  }
+  @media (max-width: 650px) {
+    .main__gallery-wrapper-left-h2 {
+      font-size: var.$font28;
+    }
+    .main__gallery-wrapper-left-p {
+      display: none;
+    }
+  }
+  background-color: var.$bg-grey;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-bottom: -150px;
+  &-wrapper {
+    @include mixin.df(space-between, center, row);
+    overflow: hidden;
+    &-left {
+      margin-left: 150px;
+      margin-right: 50px;
+      font-family: cera round pro;
+      &-h4 {
+        font-size: var.$font23;
+        font-weight: 700;
+        width: 300px;
+        color: var.$color-black;
+      }
+      &-h2 {
+        width: 400px;
+        font-size: var.$font48;
+        font-weight: 500;
+        color: var.$color-black;
+        margin-bottom: 24px;
+      }
+      &-p {
+        width: 500px;
+        font-size: var.$font16;
+        font-weight: 400;
+        color: var.$color-gray;
+        margin-bottom: 20px;
+      }
+      &-btn {
+        margin-bottom: 110px;
+        font-size: var.$font16;
+        font-weight: 700;
+        padding: 15px 42px;
+        border: 2px solid var.$color-red;
+        border-radius: 20px;
+        width: 200px;
+        color: var.$color-black;
+        transition: 0.5s;
+        background-color: var.$color-white;
+        &:hover {
+          background-color: var.$bg-red;
+          color: var.$color-white;
+        }
+      }
+    }
+    &-right {
+      // padding-left: 250px;
+      min-width: 1550px;
+      .owl-carousel {
+        gap: 40px;
+        display: flex;
+        .main__gallery-wrapper-right-card {
+          position: relative;
+          width: 300px;
+          overflow: hidden;
+          .main__gallery-wrapper-right-card-text {
+            width: 301px;
+            height: 455px;
+            position: absolute;
+            bottom: -400px;
+            text-align: center;
+            transition: 1s;
+            img {
+              width: 50px;
+              margin-left: 10px;
+              transition: 0.5s;
+              margin-top: 190px;
+            }
+          }
+          &:hover .main__gallery-wrapper-right-card-text {
+            border: 2px solid rgba(36, 36, 36, 0.2);
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            bottom: 0;
+            background: linear-gradient(
+              207.55deg,
+              rgba(0, 0, 0, 0.75) 1.5%,
+              rgba(0, 0, 0, 0.64) 98.62%
+            );
+          }
+        }
+      }
+    }
   }
 }

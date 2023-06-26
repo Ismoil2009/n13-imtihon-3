@@ -4,6 +4,14 @@
 
 .navbar {
   box-shadow: 2px 5px 50px -10px black;
+  &.shrink {
+    height: 80px !important;
+    transition: height 0.3s linear;
+    -webkit-transition: height 0.3s linear;
+    -moz-transition: height 0.3s linear;
+    -ms-transition: height 0.3s linear;
+    -o-transition: height 0.3s linear;
+  }
   .nav-link {
     position: relative;
     margin-right: 25px;
