@@ -461,10 +461,14 @@
   @media (max-width: 992px) {
     .owl-carousel {
       flex-direction: column;
-      margin-left: 330px;
     }
   }
-  @media (max-width: 650px) {
+  @media (max-width: 600px) {
+    .owl-carousel {
+      margin-left: 700px;
+    }
+  }
+  @media (max-width: 350px) {
     .main__gallery-wrapper-left-h2 {
       font-size: var.$font28;
     }
@@ -532,14 +536,14 @@
           overflow: hidden;
           .main__gallery-wrapper-right-card-text {
             width: 301px;
-            height: 455px;
+            height: 445px;
             position: absolute;
-            bottom: -400px;
+            bottom: -390px;
             text-align: center;
             transition: 1s;
             img {
               width: 50px;
-              margin-left: 10px;
+              margin-left: 130px;
               transition: 0.5s;
               margin-top: 190px;
             }

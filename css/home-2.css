@@ -462,10 +462,10 @@ a {
 @media (max-width: 992px) {
   .main__gallery .owl-carousel {
     flex-direction: column;
-    margin-left: 330px;
+    margin-left: 300px;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 350px) {
   .main__gallery .main__gallery-wrapper-left-h2 {
     font-size: 28px;
   }
@@ -535,7 +535,7 @@ a {
 }
 .main__gallery-wrapper-right .owl-carousel .main__gallery-wrapper-right-card .main__gallery-wrapper-right-card-text {
   width: 301px;
-  height: 455px;
+  height: 454px;
   position: absolute;
   bottom: -400px;
   text-align: center;

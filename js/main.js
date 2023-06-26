@@ -44,7 +44,7 @@ $(".owl-cust").owlCarousel({
   loop: true,
   dots: false,
   margin: 10,
-  nav: true,
+  nav: false,
   responsive: {
     0: {
       items: 1,
@@ -54,6 +54,27 @@ $(".owl-cust").owlCarousel({
     },
     1000: {
       items: 3,
+    },
+  },
+});
+
+$(".owl-carousel").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  dots: false,
+  autoplay: true,
+  autoplayTimeout: 1500,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 2,
+    },
+    1200: {
+      items: 4.7,
     },
   },
 });

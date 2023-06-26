@@ -142,26 +142,24 @@
       height: 460px;
     }
   }
-  @media (max-width:992px) {
+  @media (max-width: 992px) {
     .owl-carousel {
-        flex-direction: column;
-        margin-left: 330px;
+      flex-direction: column;
+      margin-left: 300px;
     }
   }
-  @media (max-width: 650px) {
+  @media (max-width: 350px) {
     .main__gallery-wrapper-left-h2 {
-        font-size: var.$font28;
+      font-size: var.$font28;
     }
     .main__gallery-wrapper-left-p {
-        display: none;
+      display: none;
     }
   }
   background-color: var.$bg-grey;
-  //   padding-right: 250px;
   padding-top: 100px;
   padding-bottom: 100px;
   margin-bottom: -150px;
-  //   min-height: 80vh;
   &-wrapper {
     @include mixin.df(space-between, center, row);
     overflow: hidden;
@@ -218,7 +216,7 @@
           overflow: hidden;
           .main__gallery-wrapper-right-card-text {
             width: 301px;
-            height: 455px;
+            height: 454px;
             position: absolute;
             bottom: -400px;
             text-align: center;
